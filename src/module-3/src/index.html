@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <%= require('raw-loader!./components/header.html').default %>
+            <div class="row">
+                <div class="col-4">
+                    <%= require('raw-loader!./components/filter.html').default %>
+                </div>
+                <div class="col-8">
+                    <%= require('raw-loader!./components/search.html').default %>
+                        <%= require('raw-loader!./components/product-list.html').default %>
+                </div>
+            </div>
+            <%= require('raw-loader!./components/pagination.html').default %>
+    </div>
+</body>
+
+</html>
